@@ -245,6 +245,7 @@ mod tests {
         let checksum =
             PaytmChecksum::generate_signature(&params, key)
                 .unwrap();
+        println!("Generated Checksum: {}", checksum);
 
         let verified = PaytmChecksum::verify_signature(
             &params,
